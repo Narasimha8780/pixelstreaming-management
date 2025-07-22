@@ -45,6 +45,15 @@
               Applications
             </div>
             <div class="sidebar-item">
+              <span class="ml-3">package</span>
+            </div>
+            <div class="sidebar-item">
+              <span class="ml-3">Application</span>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <div class="sidebar-item">
               <span class="ml-3">Reserve Applications</span>
             </div>
             <div class="sidebar-item">
@@ -61,14 +70,24 @@
             </div>
           </div>
 
-          <!-- System Section -->
+          <!-- System Setting Section -->
           <div class="mb-4">
             <div class="flex items-center px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              System
+              System Setting
             </div>
             <div class="sidebar-item">
-              <span class="ml-3">System Setting</span>
+              <span class="ml-3">Param Setting</span>
             </div>
+            <div class="sidebar-item">
+              <span class="ml-3">Admin Auth</span>
+            </div>
+            <div class="sidebar-item">
+              <span class="ml-3">WorkSpace</span>
+            </div>
+          </div>
+
+          <!-- Users Section -->
+          <div class="mb-4">
             <div class="sidebar-item">
               <span class="ml-3">Users</span>
             </div>
