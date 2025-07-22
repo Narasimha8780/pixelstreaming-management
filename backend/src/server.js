@@ -6,6 +6,7 @@ require('dotenv').config()
 
 const serverRoutes = require('./routes/servers')
 const statisticsRoutes = require('./routes/statistics')
+const renderNodesRoutes = require('./routes/renderNodes')
 
 const app = express()
 const PORT = process.env.PORT || 3001
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }))
 // Routes
 app.use('/api/servers', serverRoutes)
 app.use('/api/statistics', statisticsRoutes)
+app.use('/api/render-nodes', renderNodesRoutes)
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
