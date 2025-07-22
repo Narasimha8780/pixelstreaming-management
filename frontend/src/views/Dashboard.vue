@@ -17,25 +17,28 @@
         <div class="px-3">
           <!-- Data Center Section -->
           <div class="mb-4">
-            <div class="flex items-center px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider">
-              Data Center
-            </div>
-            <router-link 
-              to="/monitor" 
-              class="sidebar-item"
-              :class="{ 'active': $route.name === 'Monitor' }"
-            >
-              <span class="ml-3">Monitor</span>
-            </router-link>
-            <router-link 
-              to="/usage-statistics" 
-              class="sidebar-item"
-              :class="{ 'active': $route.name === 'UsageStatistics' }"
-            >
-              <span class="ml-3">Usage Statistics</span>
-            </router-link>
-            <div class="sidebar-item">
-              <span class="ml-3">clientErrLog</span>
+            <button @click="toggleSection('dataCenter')" class="flex items-center w-full px-3 py-2 text-xs font-semibold text-gray-500 uppercase tracking-wider focus:outline-none">
+              <span>Data Center</span>
+              <span class="ml-auto transform transition-transform" :class="{'rotate-180': expandedSections.dataCenter}">⌄</span>
+            </button>
+            <div v-show="expandedSections.dataCenter" class="pl-4">
+              <router-link 
+                to="/monitor" 
+                class="sidebar-item"
+                :class="{ 'active': $route.name === 'Monitor' }"
+              >
+                <span class="ml-3">Monitor</span>
+              </router-link>
+              <router-link 
+                to="/usage-statistics" 
+                class="sidebar-item"
+                :class="{ 'active': $route.name === 'UsageStatistics' }"
+              >
+                <span class="ml-3">Usage Statistics</span>
+              </router-link>
+              <div class="sidebar-item">
+                <span class="ml-3">clientErrLog</span>
+              </div>
             </div>
           </div>
 
